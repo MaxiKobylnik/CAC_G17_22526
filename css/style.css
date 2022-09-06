@@ -1,6 +1,25 @@
 .nav-top{
-    position:fixed;
+    /*position:fixed;*/
     width:100%;
     z-index:1;
     top:0;
 }
+
+svg{
+    background: blue ;
+}
+.mapadiv{
+    width:90%;
+    margin:auto;
+    
+
+}
+.mapadiv path{
+    fill: yellow;
+    stroke:aquamarine;
+    stroke-width: 2px;
+}
+
+.st0{fill:#AEB19E;fill-opacity:0.5;}
+	.st1{font-family:'MyriadPro-Regular';}
+	.st2{font-size:32px;}
