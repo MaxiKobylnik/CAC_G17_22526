@@ -1,4 +1,7 @@
 *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     text-decoration: none;
     list-style: none;
 }
@@ -22,8 +25,7 @@
 
 
 .headd{
-    height:100vh;
-    
+    height:80vh;
     background-image: var(--background), url('../img/img1.jpg');
     background-repeat: no-repeat ;
     background-size: cover;
@@ -32,22 +34,9 @@
     position: relative;
 }
 
-.headd .container{
+.nav{
+    background-color: #f6d365;
     padding: 5px;
-}
-
-.head_texts{
-    width: 100%;
-    margin-bottom: 50px;
-}
-
-.head_title{
-    font-size: 3.2rem;
-}
-
-.item{
-position: absolute;
-padding: 20px 50px;
 }
 
 .nav_nav{
@@ -66,6 +55,17 @@ nav ul li{
     padding: 10px 15px;
     font-weight:inherit;
 }
+
+.head_texts{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.head_title{
+    font-size: 3.2rem;
+}
+
+
 
 
 .checkbtn{
@@ -214,14 +214,16 @@ nav ul li{
 
     ul{
         position: absolute;
+        background:#f6d365;
+        z-index: 5;
         width: 100%;
-        height: 100vh;
-        background: none;
-        top: 200px;
+        height: 70vh;
+        top: 80px;
         left: 100%;
         text-align: center;
         transition: all .5s;
     }
+    
     nav ul li{
         display: block;
         margin: 10px 0px;
