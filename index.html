@@ -1,27 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="favicom/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>inicio</title>
 </head>
+
 </html>
+
 <body>
 
-    <!-- Navbar -->
-    <nav class="nav-top">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guía Actividades</a>
-          <a href="nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="mapa.html">mapa</a>
-        </ul>
-    </nav>
-   
-    
-    
-    
-    
-    </body>
+<!-- inicia el header -->
+    <header class="header">
+        <div>
+            <nav class="nav">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <span id="menu-abrir">&#9776;</span>
+                    <span id="menu-cerrar">X</span>
+                </label>
+
+                <span class="logo">
+                    <img src="img/logo.png" alt="logo Paseos Kids" width="70px" height="70px">
+                </span>
+
+                <ul class="items">
+                    <li><a href="guide.html" class="nav_items">Guia de actividades</a></li>
+                    <li><a href="shop.html" class="nav_items">tienda</a></li>
+                    <li><a href="mapa.html" class="nav_items">mapa</a></li>
+                    <li><a href="nosotros.html" class="nav_items">Nosotros</a></li>
+                    <li><a href="contacto.html" class="nav_items">Contacto</a></li>
+                </ul>
+            </nav>
+            <section class="slider">
+                    <ul>
+                        <li><img src="img/foto1.jpg" alt="foto1"></li>
+                        <li><img src="img/foto2.jpg" alt="foto2"></li>
+                        <li><img src="img/foto3.jpg" alt="foto3"></li>
+                        <li><img src="img/foto4.jpg" alt="foto4"></li>
+                        <li><img src="img/foto5.jpg" alt="foto5"></li>
+                    </ul>
+            </section>
+        </div>
+        <div class="head_img" overflow: hidden;" >
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f6d365;"></path></svg>
+        </div>
+    </header>
+<!-- final del header -->
+
+    <main>
+<!-- inicio primer bloque -->
+    <section class="bloque1 container">
+        <div class="bloque1_text grid1">
+            <h2 class="subtitle">Espacio Familiar</h2>
+            <p class="bloque1_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur excepturi ad, dolore minus fuga, facilis quas earum quam exercitationem libero maiores molestiae provident fugiat praesentium doloribus sunt error possimus.</p>
+        </div>
+
+        <figure class="bloque1_img grid2">
+            <img src="img/img2.jpg" alt="figure" class="bloque1_picture">
+        </figure>
+
+        <figure class="bloque1_img grid3">
+            <img src="img/img3.jpg" alt="figure" class="bloque1_picture">
+        </figure>
+ 
+        <div class="bloque1_text grid4">
+            <h2 class="subtitle">Juego para pequeñines</h2>
+            <p class="bloque1_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur excepturi ad, dolore minus fuga, facilis quas earum quam exercitationem libero maiores molestiae provident fugiat praesentium doloribus sunt error possimus.</p>
+        </div>
+    </section>
+    <!-- fin primer bloque -->
+
+    <!-- inicio segundo bloque -->
+    <section class="bloque2">
+        <div class="container">
+            <h2 class="subtitle">Fotos Relacionadas</h2>
+            <div class="bloque2_grid">
+
+                <article class="bloque2_items">
+                    <img src="img/img1.jpg" alt="foto1" class="bloque2_img">
+                    <div class="bloque2_hover">
+                        <h2 class="bloque2_title">Foto1</h2>
+                        <i class="far fa-file-alt bloque2.ico"></i>
+                    </div>
+                </article>
+
+                <article class="bloque2_items">
+                    <img src="img/img2.jpg" alt="foto2" class="bloque2_img">
+                    <div class="bloque2_hover">
+                        <h2 class="bloque2_title">Foto2</h2>
+                        <i class="far fa-file-alt bloque2.ico"></i>
+                    </div>
+                </article>
+
+                <article class="bloque2_items">
+                    <img src="img/img3.jpg" alt="foto3" class="bloque2_img">
+                    <div class="bloque2_hover">
+                        <h2 class="bloque2_title">Foto3</h2>
+                        <i class="far fa-file-alt bloque2.ico"></i>
+                    </div>
+                </article>
+
+                <article class="bloque2_items">
+                    <img src="img/img4.jpg" alt="foto4" class="bloque2_img">
+                    <div class="bloque2_hover">
+                        <h2 class="bloque2_title">Foto4</h2>
+                        <i class="far fa-file-alt bloque2.ico"></i>
+                    </div>
+                </article>
+
+                <article class="bloque2_items">
+                    <img src="img/img5.jpg" alt="foto5" class="bloque2_img">
+                    <div class="bloque2_hover">
+                        <h2 class="bloque2_title">Foto5</h2>
+                        <i class="far fa-file-alt bloque2.ico"></i>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    <!-- fin segundo bloque -->
+    </main>
+
+    <footer class="footer">
+
+        <i class='bx bxl-twitter' style='color:#2b2067'></i>
+        <i class='bx bxl-facebook-circle' style='color: blue'></i>
+        <i class='bx bxl-whatsapp-square' style='color:#21bb1f'></i>
+        <i class='bx bxl-instagram' style='color:#bb1f52'></i>
+        <p>Derechos Reservados</p>
+    </footer>
+
+</body>
+
