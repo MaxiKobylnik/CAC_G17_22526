@@ -50,24 +50,38 @@ nav ul li{
     font-weight:inherit;
     border: 1px solid #fff;
 }
-
-
-.slider {
+/* ******************************************* modifico desde aca******** */
+/* .slider {
     width: 100%;
     padding-top: 50px;
     height: 600px;
+} */
+
+.slider{
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    height: 600px;
+    overflow: hidden;
 }
 
-.slider ul {
+
+/* .slider ul {
     display: flex;
     width: 500%;
     animation: slide 30s infinite alternate ease-in-out;
-}
+} */
 
+.image-container {
+    display: flex;
+    width:500%;
+    transition: transform 0.4s ease-in-out;
+}
+/* 
 .slider li {
     list-style: none;
     width: 100%;
-}
+} */
 
 .slider img {
     width: 100%;
@@ -75,7 +89,7 @@ nav ul li{
     object-fit: fill;
 }
 
-
+/* 
 @keyframes slide {
     0% {margin-left: 0%;}
     20% {margin-left: 0%;}
@@ -91,7 +105,33 @@ nav ul li{
     
     80% {margin-left: -400%;}
     100% {margin-left: -400%;}
-} 
+}  */
+
+
+
+/* nuevo */ 
+.btn{
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 50px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.btn.prev{
+    left: 10px;
+}
+
+.btn.next{
+    right: 10px;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+/**************** nuevo******************* */
 
 .head_img{
     position: absolute;
