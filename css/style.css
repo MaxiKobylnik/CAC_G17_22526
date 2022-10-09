@@ -69,21 +69,32 @@
       background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     }
   } 
-svg {
-    background: blue;
+  svg {
+    background: #f6d365;
 }
 
-.mapadiv {
-    width: 90%;
+ .mapadiv {
+    width: 40%;
+    height: 40%;
     margin: auto;
 
 
 }
 
+.mapadiv polygon {
+    fill: #fdf9c4;
+    /* stroke: black; */
+    stroke-width: 18px;
+}
+
 .mapadiv path {
-    fill: yellow;
-    stroke: aquamarine;
-    stroke-width: 2px;
+  fill: #fdf9c4;
+  
+  stroke-width: 10px;
+}
+
+.mapadiv a :hover{
+  fill:#dac9df;
 }
 
 .st0 {
