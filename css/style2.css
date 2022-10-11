@@ -12,6 +12,11 @@
     position: relative;
 }
 
+.header_contacto{
+    height:20vh;
+    position: relative; 
+}
+
 .nav{
     position: fixed;
     z-index: 2;
@@ -43,7 +48,7 @@ nav ul li{
 }
 
 .nav_items{
-    color: #fff;
+    color: #000;
     line-height: 80px;
     margin-right: 20px;
     padding: 10px 15px;

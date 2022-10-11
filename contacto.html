@@ -7,6 +7,8 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="favicom/logo.ico" type="image/x-icon">    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">      
     <script src="js/navmenu.js"></script>    
     <title>Document</title>
@@ -14,70 +16,107 @@
 </html>
 <body>
 
-  <header class="header">
-
-
+  <header class="header_contacto">
     <div>
-        <img class="logo" src="img/logo.png" alt="logo Paseos Kids">
+        <nav class="nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">X</span>
+            </label>
 
+            <!-- <span > -->
+                <img class="logo" src="img/logopaseo_op3.png" alt="logo Paseos Kids" >
+            <!-- </span> -->
 
-    </div>
-    <div class="topNav" id="myTopnav">
-
-        <a title="Home" href="index.html"><img class="imgnav" src="img/home.png" /></a>
-        <a title="Guide" href="guide.html"><img class="imgnav" src="img/guide.png" alt="guide" /></a>
-
-        <a title="Tienda" href="shop.html"><img class="imgnav" src="img/tienda.png" alt="Tienda" /></a>
-        <a title="Nosotros" href="nosotros.html"><img class="imgnav" src="img/nosotros.png" alt="nosotros" /></a>
-        <a title="contacto" href="contacto.html"><img class="imgnav" src="img/contacto.png" alt="contacto" /></a>
-
-        <a href="javascript:void(0);" class="icon" onclick="navmenu()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+            <ul class="items">
+                <li><a href="guide.html" class="nav_items">Guia de actividades</a></li>
+                <li><a href="shop.html" class="nav_items">tienda</a></li>
+                <li><a href="mapa.html" class="nav_items">mapa</a></li>
+                <li><a href="nosotros.html" class="nav_items">Nosotros</a></li>
+                <li><a href="contacto.html" class="nav_items">Contacto</a></li>
+            </ul>
+        </nav>
 
 </header>
 
-   <section class="formulario">
-    <form action="" method="post"> 
+   
 
-      <div class="">
-        <i class="" style="width:30px"></i> Buenos Aires, Argentina
-        <br>
-        <i class="" style="width:30px"></i> TEL: 555-5555
-        <br>
-        <i class="" style="width:30px"> </i> Email: proyecto17@paseosKids.com
-        <br>
-        <br>
-      </div> 
-
-
-        <fieldset>
-         <!--! <legend></legend>-->
-      
-          <!-- Campo de texto -->
-          <label for="nombre">Nombre</label>          
-          <input type="text" name="nombre" id= "nombre" placeholder="Su nombre" />
-          <label for="apellido">Apellido</label>          
-          <input type="text" name="apellido" id= "apellido" placeholder="Apellido" />
-          <label for="edad">Edad</label>          
-          <input type="number" name="edad" id= "edad" placeholder="Edad" min="18" max="100" />
-          <label for="email">Email</label>          
-          <input type="email" name="email" id= "email" placeholder="email@email.com" />
-          <br></br>
-          <label for="comentario"></label>
-          <textarea name="comentario" rows="5" cols="50">Escribe aquí tu comentario: </textarea>
-          
-        </fieldset>
-        <br>
-
-
-        <input type="submit" value="Enviar" />
+    <main>
+      <form action="" class="formulario" id="formulario">
          
- 
-      </p>
-    </section>
-    </form>
+        <!-- Grupo: Nombre -->
+        <div class="formulario__grupo" id="grupo__nombre">
+          <label for="nombre" class="formulario__label">Nombre</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Juan">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+        </div>
+
+        <!-- Grupo: Apellido -->
+        <div class="formulario__grupo" id="grupo__apellido">
+          <label for="apellido" class="formulario__label">Apellido</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Perez">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+        </div>
+  
+          
+        <!-- Grupo: Correo Electronico -->
+        <div class="formulario__grupo" id="grupo__correo">
+          <label for="correo" class="formulario__label">Correo Electrónico</label>
+          <div class="formulario__grupo-input">
+            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+        </div>
+  
+        <!-- Grupo: Teléfono -->
+        <div class="formulario__grupo" id="grupo__telefono">
+          <label for="telefono" class="formulario__label">Teléfono</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+        </div>
+
+        <!-- Grupo: Mensaje -->
+        <div class="formulario__grupo" id="grupo__mensaje">
+          <label for="mensaje" class="formulario__label">Mensaje</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="mensaje" id="mensaje" placeholder="Escriba aqui">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error"></p>
+        </div>
+  
+        <!-- Grupo: Terminos y Condiciones -->
+        <div class="formulario__grupo" id="grupo__terminos">
+          <label class="formulario__label">
+            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+            Acepto los Terminos y Condiciones
+          </label>
+        </div>
+  
+        <div class="formulario__mensaje" id="formulario__mensaje">
+          <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+        </div>
+  
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <button type="submit" class="formulario__btn">Enviar</button>
+          <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+        </div>
+      </form>
+    </main>
+  
+    <script src="js/formulario.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
    
     <footer class="footer">
