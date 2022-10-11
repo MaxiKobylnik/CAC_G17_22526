@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="favicom/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/navmenu.js"></script>
+    <link rel="stylesheet" href="css/style2.css">
     <title>Tienda</title>
 </head>
 
@@ -17,40 +16,42 @@
 
 <body>
     <header class="header">
-
-
         <div>
-            <img class="logo" src="img/logo.png" alt="logo Paseos Kids">
+            <nav class="nav">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <span id="menu-abrir">&#9776;</span>
+                    <span id="menu-cerrar">X</span>
+                </label>
 
+                <span class="logo">
+                    <img src="img/logo.png" alt="logo Paseos Kids" width="70px" height="70px" border-radius="50%">
+                </span>
 
-        </div>
-        <div class="topNav" id="myTopnav">
-
-            <a title="Home" href="index.html"><img class="imgnav" src="img/home.png" /></a>
-            <a title="Guide" href="guide.html"><img class="imgnav" src="img/guide.png" alt="guide" /></a>
-
-            <a title="Tienda" href="shop.html"><img class="imgnav" src="img/tienda.png" alt="Tienda" /></a>
-            <a title="Nosotros" href="nosotros.html"><img class="imgnav" src="img/nosotros.png" alt="nosotros" /></a>
-            <a title="contacto" href="contacto.html"><img class="imgnav" src="img/contacto.png" alt="contacto" /></a>
-
-            <a href="javascript:void(0);" class="icon" onclick="navmenu()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
+                <ul class="items">
+                    <li><a href="index.html" class="nav_items1">Inicio</a></li>
+                    <li><a href="shop.html" class="nav_items2">Tienda</a></li>
+                    <li><a href="mapa.html" class="nav_items3">Mapa</a></li>
+                    <li><a href="nosotros.html" class="nav_items4">Nosotros</a></li>
+                    <li><a href="contacto.html" class="nav_items5">Contacto</a></li>
+                </ul>
+            </nav>
+            </div>
 
     </header>
 
-
-    <p class="pconst">En construcción</p>
-
+    <section>
+        <p >En construcción</p>
+    </section>
 
     <footer class="footer">
 
-        <i class='bx bxl-twitter' style='color:#2b2067'></i>
-        <i class='bx bxl-facebook-circle' style='color: blue'></i>
-        <i class='bx bxl-whatsapp-square' style='color:#21bb1f'></i>
-        <i class='bx bxl-instagram' style='color:#bb1f52'></i>
-        <p>Derechos Reservados</p>
+        <a href="https://www.twitter.com/paseoskids/" target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow" ><i class='bx bxl-twitter' style='color:#2b2067'></i></a>
+        <a href="https://www.facebook.com/paseoskids/" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow"><i class='bx bxl-facebook-circle' style='color: blue'></i></a>
+        <a href="https://www.instagram.com/paseoskids/" target="_blank" rel="noopener noreferrer nofollow" data-label="Instagram"> <i class='bx bxl-instagram' style='color:#bb1f52'></i></a>
+        <a href="mailto:paseoskids@gmail.com" data-label="E-mail" rel="nofollow"> <i class='bx bxl-gmail' style='color:#d00b0b'  ></i></a>
+        <a href="https://wa.me/541111115555"><i class='bx bxl-whatsapp-square' style='color:#21bb1f'></i></a>
+        <p>Derechos Reservados 2022</p>
     </footer>
 
 
