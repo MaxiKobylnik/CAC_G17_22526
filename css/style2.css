@@ -11,12 +11,23 @@
     height:80vh;
     position: relative;
 }
-
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #E5E5E5;
+}
 .header_contacto{
     height:20vh;
     position: relative; 
 }
-
+.logo {
+    position: fixed; 
+   left: 50px;
+   top: 10px;
+    border-radius: 50%;
+   z-index: -1;
+   width:91px;
+   height: 58px;
+ } 
 .nav{
     position: fixed;
     z-index: 2;
