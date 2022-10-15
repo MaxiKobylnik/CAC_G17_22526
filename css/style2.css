@@ -6,14 +6,16 @@
     list-style: none;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #E5E5E5;
+    display: grid;
+    grid-template-rows: 80px 500px 1000px 900px 60px;
+}
 /******** Inicio del header *********/
 .header{
-    height:80vh;
+    height: 80px;
     position: relative;
-}
-body {
-	font-family: 'Roboto', sans-serif;
-	background: #E5E5E5;
 }
 .header_contacto{
     height:20vh;
@@ -21,19 +23,18 @@ body {
 }
 .logo {
     position: fixed; 
-   left: 50px;
-   top: 10px;
+    left: 50px;
+    top: 10px;
     border-radius: 50%;
-   z-index: -1;
-   width:91px;
-   height: 58px;
- } 
+    z-index: -1;
+    width:91px;
+    height: 58px;
+} 
 .nav{
     position: fixed;
     z-index: 2;
     width:100%;
     background: #f6d365;
-    padding: 6px;
 }
 
 #check{
@@ -105,66 +106,28 @@ nav ul li{
     padding: 10px 15px;
     font-weight:inherit; 
 }
-/* ******************************************* modifico desde aca******** */
-/* .slider {
+/******** fin del header *********/
+.bloque0 {
     width: 100%;
-    padding-top: 50px;
-    height: 600px;
-} */
+    height: 500px;
+}
 
 .slider{
     position: relative;
-    width: 100%;
-    padding-top: 50px;
-    height: 600px;
-    overflow: hidden;
-}
-
-
-/* .slider ul {
-    display: flex;
-    width: 500%;
-    animation: slide 30s infinite alternate ease-in-out;
-} */
-
-.image-container {
-    display: flex;
-    width:500%;
-    transition: transform 0.4s ease-in-out;
-}
-/* 
-.slider li {
-    list-style: none;
-    width: 100%;
-} */
-
-.slider img {
-    width: 100%;
-    height: 500px;
+    width: 1500px;
+    height: 400px;
     object-fit: fill;
 }
 
-/* 
-@keyframes slide {
-    0% {margin-left: 0%;}
-    20% {margin-left: 0%;}
-    
-    20% {margin-left: -100%;}
-    40% {margin-left: -100%;}
-    
-    40% {margin-left: -200%;}
-    60% {margin-left: -200%;}
-    
-    60% {margin-left: -300%;}
-    80% {margin-left: -300%;}
-    
-    80% {margin-left: -400%;}
-    100% {margin-left: -400%;}
-}  */
+.image-container {
+    display: flex;
+    width:500px;
+    height: 500px;
+    transition: transform 0.4s ease-in-out;
+}
 
 
 
-/* nuevo */ 
 .btn{
     position: absolute; 
     top: 50%;
@@ -186,29 +149,24 @@ nav ul li{
 .btn:hover {
     opacity: 1;
 }
-/**************** nuevo******************* */
 
 .head_img{
     position: absolute;
     z-index: 1;
-    bottom: 0;
-    left: 0;
     width: 100%;
     height: 100px;
 }
-/******** fin del header *********/
 
-.container{
+
+/******** inicio bloque1 *********/
+
+
+.bloque1{
     width: 90%;
     margin: 0 auto;
     overflow: hidden;
     padding: 80px 0;
     max-width: 1200px;
-    
-}
-
-/******** inicio bloque1 *********/
-.bloque1{
     min-height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -232,7 +190,14 @@ nav ul li{
 }
 /******** fin bloque1 *********/
 
-
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
+    
+}
 .bloque2{
     background: #f6d365;
 }
@@ -311,14 +276,111 @@ nav ul li{
     bottom: 0;
     left: 0;
     text-align: center;
-    height: 56px; 
+    height: 60px; 
     background: #f6d365;
 }
 
 
 /******** inicio primer responsive *********/
 
-@media (max-width: 900px){
+@media (max-width: 1000px){
+
+    /******** inicio header *********/
+
+    .items {
+        float: left;
+        padding-left: 250px; 
+    }
+    
+    #menu-cerrar{
+        display: block;
+    }
+
+    .checkbtn{
+        display: none;
+    }
+
+    .bloque0 {
+        width: 100%;
+        height: 500px;
+    }
+    
+    .slider{
+        position: relative;
+        width: 100%;
+        height: 400px;
+        object-fit: fill;
+    }
+    
+    .image-container {
+        display: flex;
+        width:500px;
+        height: 500px;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .slider ul {
+        background-color: white;
+
+
+    }
+    /******** fin header *********/
+    
+    /******** inicio bloque 1 *********/
+    .bloque1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"; 
+    }  
+    .grid1 {
+        grid-area: a;
+    }
+    .grid2 {
+        grid-area: b;
+    }
+    .grid4 {
+        grid-area: c;
+    }
+    .grid3 {
+        grid-area: d;
+    }
+    /******** fin bloque 1 *********/
+    
+    /******** inicio bloque 2 *********/
+    .bloque2_grid{
+    display: grid;
+    height: 100%;
+    grid-template-areas: 
+    "img1 img1"
+    "img1 img1"
+    "img2 img3"
+    "img4 img5";
+    gap: 10px;
+    }
+    /******** fin bloque 2 *********/
+
+} 
+/******** fin primer responsive *********/
+
+
+
+
+
+
+
+
+
+
+
+
+/******** inicio segundo responsive *********/
+
+
+@media (max-width: 800px){
 
     /******** inicio header *********/
     #menu-cerrar{
@@ -369,9 +431,18 @@ nav ul li{
         left: 0;
     }
 
-  .slider {
-        position: absolute;
-        z-index: 1;  
+    .slider{
+        position: relative;
+        width: 100%;
+        height: 400px;
+        object-fit: fill;
+    }
+
+    .image-container {
+        display: flex;
+        width:500px;
+        height: 500px;
+        transition: transform 0.4s ease-in-out;
     }
     
     .slider ul {
@@ -418,4 +489,138 @@ nav ul li{
     /******** fin bloque 2 *********/
 
 } 
-/******** fin primer responsive *********/
+/******** fin segundo responsive *********/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******** inicio tercer responsive *********/
+
+
+
+
+
+
+@media (max-width: 400px){
+
+    /******** inicio header *********/
+
+    
+    #menu-cerrar{
+        display: none;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+
+   
+
+    ul{
+        position: absolute;
+        background:#f6d365;
+        z-index: 10;
+        width: 100%;
+        height: 70vh;
+        top: 80px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    
+    nav ul li{
+        display: block;
+        z-index: 15;
+        margin: auto;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        display: block;
+        left: 0;
+    }
+
+    #check:checked ~ label #menu-cerrar{
+        display: block;
+        left: 0;
+    }
+
+    #check:checked ~ label #menu-abrir{
+        display: none;
+        left: 0;
+    }
+
+    .slider{
+        position: relative;
+        width: 100%;
+        height: 400px;
+        object-fit: fill;
+    }
+
+    .image-container {
+        display: flex;
+        width:500px;
+        height: 500px;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .slider ul {
+        background-color: white;
+    }
+    /******** fin header *********/
+    
+    /******** inicio bloque 1 *********/
+    .bloque1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"; 
+    }  
+    .grid1 {
+        grid-area: a;
+    }
+    .grid2 {
+        grid-area: b;
+    }
+    .grid4 {
+        grid-area: c;
+    }
+    .grid3 {
+        grid-area: d;
+    }
+    /******** fin bloque 1 *********/
+    
+    /******** inicio bloque 2 *********/
+    .bloque2_grid{
+    display: grid;
+    height: 100%;
+    grid-template-areas: 
+    "img1"
+    "img2"
+    "img3"
+    "img4"
+    "img5";
+    gap: 10px;
+    }
+    /******** fin bloque 2 *********/
+
+} 
+/******** fin tercer responsive *********/
