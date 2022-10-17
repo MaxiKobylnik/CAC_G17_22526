@@ -37,6 +37,18 @@ body {
     background: #f6d365;
 }
 
+.barrio_caja{
+    border-style:groove;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    margin-top: 00.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.detalles_escondidos{
+    display: none;
+}
+
 #check{
     display:none;
 }
