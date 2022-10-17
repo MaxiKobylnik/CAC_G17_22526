@@ -293,15 +293,16 @@ nav ul li{
 }
 
 
-/******** inicio primer responsive *********/
+/******** inicio primer responsive ********
 
-@media (max-width: 1000px){
-
+@media (max-width: 1000px){*/
+@media   (min-width: 1200px) {
+  
     /******** inicio header *********/
 
     .items {
         float: left;
-        padding-left: 250px; 
+        padding-left: 60%;  
     }
     
     #menu-cerrar{
@@ -392,8 +393,9 @@ nav ul li{
 /******** inicio segundo responsive *********/
 
 
-@media (max-width: 800px){
+/*@media (max-width: 800px){ */
 
+@media   (min-width: 640px) and (max-width: 1200px) {
     /******** inicio header *********/
     #menu-cerrar{
         display: none;
@@ -502,27 +504,13 @@ nav ul li{
 
 } 
 /******** fin segundo responsive *********/
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 /******** inicio tercer responsive *********/
 
-
-
-
-
-
-@media (max-width: 400px){
+/**@media (max-width: 400px) */
+@media  (max-width: 640px) {
 
     /******** inicio header *********/
 
