@@ -200,6 +200,48 @@ nav ul li{
     line-height: 1.5;
     font-weight: 300;
 }
+
+/*Mapa*/
+svg {
+    background: #f6d365;
+}
+
+ .mapadiv {
+    width: 40%;
+    height: 40%;
+    margin: auto;
+
+
+}
+
+.mapadiv polygon {
+    fill: #fdf9c4;
+    /* stroke: black; */
+    stroke-width: 18px;
+}
+
+.mapadiv path {
+  fill: #fdf9c4;
+  
+  stroke-width: 10px;
+}
+
+.mapadiv a :hover{
+  fill:#dac9df;
+}
+
+.st0 {
+    fill: #AEB19E;
+    fill-opacity: 0.5;
+}
+
+.st1 {
+    font-family: 'MyriadPro-Regular';
+}
+
+.st2 {
+    font-size: 32px;
+}
 /******** fin bloque1 *********/
 
 .container{
