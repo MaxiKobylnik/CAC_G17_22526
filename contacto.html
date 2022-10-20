@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="favicom/logo.ico" type="image/x-icon">    
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">      
@@ -41,7 +40,7 @@
 
 
     <main>
-      <form  class="formulario" id="formulario" action="https://formspree.io/f/xbjbkpok" method="POST" >
+      <form  class="formulario" id="formulario"  action="https://formspree.io/f/xbjbkpok" method="POST" >
          
         <!-- Grupo: Nombre -->
         <div class="formulario__grupo" id="grupo__nombre">
@@ -98,7 +97,7 @@
         <!-- Grupo: Terminos y Condiciones -->
         <div class="formulario__grupo" id="grupo__terminos">
           <label class="formulario__label">
-            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" onclick='handleClick(this);'>
             Acepto los Terminos y Condiciones
           </label>
         </div>
@@ -108,7 +107,7 @@
         </div>   
   
         <div class="formulario__grupo formulario__grupo-btn-enviar">
-          <button type="submit" class="formulario__btn">Enviar</button>
+          <button type="submit" class="formulario__btn" disabled >Enviar</button>  
           <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
         </div>
       </form>
