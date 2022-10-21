@@ -100,7 +100,7 @@ function showLugares(data) {
   function fetchLugares(){
     
 
-    fetch('../json/lugares.json') //Como estamos en el mismo servidor
+    fetch('/json/lugares.json') //Como estamos en el mismo servidor
     .then(resp => resp.json())
     .then(json => {
         let barrioHtml ='<ul>';
@@ -146,5 +146,5 @@ function showLugares(data) {
 
         document.body.innerHTML += barrioHtml;
     })
-    .catch(err => console.error(err))
+    // .catch(err => console.error(err))
 }
