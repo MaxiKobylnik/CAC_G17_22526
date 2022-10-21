@@ -64,15 +64,17 @@ function change_display(event){
     
 }
 
-function showLugares(json) {
-    const lugares = json;
-    let barrioHtml ='<ul>';
-  
-    fetch('lugares.json')
-                .then(response => response.json())
-                .then(json => console.log(json));
+function showLugares(data) {
+    
+    let lugares = data;
 
-    for (var i = 0; i < lugares.length; i++) {
+     let barrioHtml ='<ul>';
+  
+    // fetch('lugares.json')
+    //             .then(response => response.json())
+    //             .then(json => console.log(json));
+
+     for (var i = 0; i < lugares; i++) {
       
         barrioHtml +=
     `<li class="barrio_caja">
@@ -94,3 +96,55 @@ function showLugares(json) {
 
     document.body.innerHTML += barrioHtml;
   }
+
+  function fetchLugares(){
+    
+
+    fetch('/json/lugares.json') //Como estamos en el mismo servidor
+    .then(resp => resp.json())
+    .then(json => {
+        let barrioHtml ='<ul>';
+        json.forEach(element => {
+            //<p>${element.barrio} </p><br>
+            if(element.barrio == Params(document.location.href).replace("+", " "))
+            {
+            // barrioHtml +=
+            // `<li class="barrio_caja">
+            // <div >
+            
+        
+            // <p >${element.nombreLugar}</p><br>
+            
+            // <p link_id= ${element.id} onclick= "change_display(event)">${element.ubicacion}</p><br>
+            // <p  id=${element.id} class="detalles_escondidos">
+            
+            // <iframe src=${element.link} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            // </p><br>
+            // </div>
+            // </li>    
+            // ` 
+
+            barrioHtml +=
+            `<li class="barrio_caja">
+            <div >
+            
+        
+            <p link_id= ${element.id} onclick= "change_display(event)">${element.nombreLugar}</p><br>
+            </div>
+            <div id=${element.id} class="detalles_escondidos"  >
+            <p >${element.ubicacion}</p><br>
+            <p  >
+            
+            <iframe src=${element.link} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p><br>
+            </div>
+            </li>    
+            ` 
+            }
+        });
+        barrioHtml += '</ul>';
+
+        document.body.innerHTML += barrioHtml;
+    })
+    .catch(err => console.error(err))
+}
