@@ -100,7 +100,7 @@ function showLugares(data) {
   function fetchLugares(){
     
 
-    fetch('/json/lugares.json') //Como estamos en el mismo servidor
+    fetch('../json/lugares.json') //Como estamos en el mismo servidor
     .then(resp => resp.json())
     .then(json => {
         let barrioHtml ='<ul>';
