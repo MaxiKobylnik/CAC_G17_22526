@@ -51,7 +51,7 @@ const validarCampo = (expresion, input, campo) => {
 
 	 	campos[campo] = false;
 	}
-	habilitarButton();
+	 habilitarButton(); 
 }
 const habilitarButton = () => {
    const button = document.querySelector('button') 
@@ -60,7 +60,7 @@ const habilitarButton = () => {
    }
    else{
 	   button.disabled =  true  
-   }
+   } 
 }
 
 function handleClick(checkbox) { 
@@ -104,7 +104,30 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validarFormulario);
 
 });
+// para que no muestre mensaje de mail enviado de formspree
+const $formulario= document.querySelector('#formulario')
 
+const button = document.querySelector('button') 
+$formulario.addEventListener('submit', handleSubmit) 
+async function handleSubmit (event) {
+    event.preventDefault()
+    const form = new FormData(this) 
+    
+    console.log(FormData.arguments ) 
+        const response = await fetch(this.action,{
+        method: this.method,
+        body:form,
+        headers: {
+            'Accept': 'application/json'
+          }
+    })
+    if (response.ok) {
+        this.reset()
+		button.disabled =  true  
+        alert('Gracias por contactarnos. Te contestaremos pronto. ')
+    }
+}
+//
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
