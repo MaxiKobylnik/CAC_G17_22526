@@ -146,5 +146,5 @@ function showLugares(data) {
 
         document.body.innerHTML += barrioHtml;
     })
-    // .catch(err => console.error(err))
+    
 }
