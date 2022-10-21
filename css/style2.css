@@ -8,7 +8,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #E5E5E5;
+    /* background: #E5E5E5; */
+    background: white;
     display: grid;
     grid-template-rows: 80px 500px 1000px 900px 60px;
 }
@@ -204,26 +205,33 @@ nav ul li{
 }
 
 /*Mapa*/
+.bodymap{
+    /* font-family: 'Roboto', sans-serif; */
+    /* background: #E5E5E5; */
+    /* background: white; */
+    /* display: grid; */
+    grid-template-rows: 80px 600px  60px; 
+}
 svg {
-    background: #f6d365;
+    background: white;
 }
 
  .mapadiv {
     width: 40%;
-    height: 40%;
+    /* height: 80%; */
     margin: auto;
 
 
 }
 
 .mapadiv polygon {
-    fill: #fdf9c4;
+    fill: #f2cb05;
     /* stroke: black; */
     stroke-width: 18px;
 }
 
 .mapadiv path {
-  fill: #fdf9c4;
+  fill: #f2cb05;
   
   stroke-width: 10px;
 }
