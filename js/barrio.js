@@ -148,3 +148,54 @@ function showLugares(data) {
     })
     
 }
+
+async function fetchLugaresJSON() {
+    const response = await fetch('/json/lugares.json');
+    const lugares = await response.json();
+    return lugares;
+  }
+  
+  fetchLugaresJSON().then(lugares => {
+    let barrioHtml ='<ul>';
+    lugares.forEach(lugar => {
+            //<p>${element.barrio} </p><br>
+            if(lugar.barrio == Params(document.location.href).replace("+", " "))
+            {
+            // barrioHtml +=
+            // `<li class="barrio_caja">
+            // <div >
+            
+        
+            // <p >${element.nombreLugar}</p><br>
+            
+            // <p link_id= ${element.id} onclick= "change_display(event)">${element.ubicacion}</p><br>
+            // <p  id=${element.id} class="detalles_escondidos">
+            
+            // <iframe src=${element.link} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            // </p><br>
+            // </div>
+            // </li>    
+            // ` 
+
+            barrioHtml +=
+            `<li class="barrio_caja">
+            <div >
+            
+        
+            <p link_id= ${lugar.id} onclick= "change_display(event)">${lugar.nombreLugar}</p><br>
+            </div>
+            <div id=${lugar.id} class="detalles_escondidos"  >
+            <p >${lugar.ubicacion}</p><br>
+            <p  >
+            
+            <iframe src=${lugar.link} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p><br>
+            </div>
+            </li>    
+            ` 
+            }
+        });
+        barrioHtml += '</ul>';
+
+        document.body.innerHTML += barrioHtml;
+  });
