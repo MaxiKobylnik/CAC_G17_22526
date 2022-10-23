@@ -140,3 +140,12 @@ fetchLugaresJSON().then((lugares) => {
 
   document.body.innerHTML += barrioHtml;
 });
+
+function fetchLugares() {
+// load fs
+const fs = require(["fs"]);
+// read the file
+const content = fs.readFileSync("/json/lugares.json");
+// print it
+console.log(content.toString());
+}
