@@ -376,7 +376,9 @@ nav ul li{
         height: 400px;
         object-fit: fill;
     }
-    
+    .bloque1_picture{
+        max-width: 50%;
+    }
     .image-container {
         display: flex;
         width:500px;
@@ -394,12 +396,10 @@ nav ul li{
     /******** inicio bloque 1 *********/
     .bloque1 {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
         grid-template-areas: 
-        "a"
-        "b"
-        "c"
-        "d"; 
+        "a b"
+        "c d" ; 
     }  
     .grid1 {
         grid-area: a;
