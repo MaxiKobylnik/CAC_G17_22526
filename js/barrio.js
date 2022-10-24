@@ -109,7 +109,7 @@ function change_display(event) {
 // }
 
 async function fetchLugaresJSON() {
-  const response = await fetch('/json/lugares.json', {
+  const response = await fetch('/img/lugares.json', {
     mode: 'no-cors'
   });
   const lugares = await response.json();
