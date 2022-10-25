@@ -122,7 +122,7 @@ fetchLugaresJSON().then((lugares) => {
     
     if (lugar.barrio == Params(document.location.href).replace("+", " ")) {
       barrioHtml += `<li class="barrio_caja">
-            <div >
+            <div class="barrio_plaza">
             
         
             <p link_id= ${lugar.id} onclick= "change_display(event)">${lugar.nombreLugar}</p><br>

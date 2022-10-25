@@ -87,6 +87,7 @@ nav ul li{
     line-height: 80px;
     margin-right: 20px;
     padding: 10px 15px; 
+    border-radius: 0.5rem;
     font-weight:inherit;
 }
 .nav_items2{
@@ -95,6 +96,7 @@ nav ul li{
     line-height: 80px;
     margin-right: 20px;
     padding: 10px 15px; 
+    border-radius: 0.5rem;
     font-weight:inherit; 
 }
 .nav_items3{
@@ -103,6 +105,7 @@ nav ul li{
     line-height: 80px;
     margin-right: 20px;
     padding: 10px 15px; 
+    border-radius: 0.5rem;
     font-weight:inherit; 
 }
 .nav_items4{
@@ -111,6 +114,7 @@ nav ul li{
     line-height: 80px;
     margin-right: 20px;
     padding: 10px 15px;
+    border-radius: 0.5rem;
     font-weight:inherit; 
 }
 .nav_items5{
@@ -119,6 +123,7 @@ nav ul li{
     line-height: 80px;
     margin-right: 20px;
     padding: 10px 15px;
+    border-radius: 0.5rem;
     font-weight:inherit; 
 }
 /******** fin del header *********/
@@ -264,6 +269,10 @@ nav ul li{
   fill: #f2cb05;
   
   stroke-width: 10px;
+}
+
+.barrio_caja:hover{
+    background-color: #f2cb05;
 }
 
 .mapadiv a :hover{
