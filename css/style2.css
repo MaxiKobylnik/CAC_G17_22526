@@ -138,6 +138,7 @@ nav ul li{
     display: flex;
     width:500px;
     height: 500px;
+    /* overflow: hidden; */
     transition: transform 0.4s ease-in-out;
 }
 
@@ -189,6 +190,35 @@ nav ul li{
     justify-items: center;
     align-items: center;
 }
+
+.bloque1_text {
+    width: 400px;
+}
+
+.bloque1_text h2 {
+    float: left;
+    position: relative;
+}
+
+.bloque1_text h2 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: #fff;
+    border-left: 1px solid #000;
+    animation: maquina 3s infinite alternate steps(30);
+}
+
+@keyframes maquina {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+
 
 .bloque1_img{
     text-align: center;
