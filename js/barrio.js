@@ -109,7 +109,7 @@ function change_display(event) {
 // }
 
 async function fetchLugaresJSON() {
-  const response = await fetch('https://my-json-server.typicode.com/MaxiKobylnik/CAC_G17_22526/posts', {
+  const response = await fetch('/json/lugares.json', {
     mode: 'no-cors'
   });
   const lugares = await response.json();
@@ -131,7 +131,7 @@ fetchLugaresJSON().then((lugares) => {
             <p >${lugar.ubicacion}</p><br>
             <p  >
             
-            <iframe src=${lugar.link} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src=${lugar.link} width=50% height=25% style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </p><br>
             </div>
             </li>    

@@ -245,14 +245,14 @@ nav ul li{
     /* background: #E5E5E5; */
     /* background: white; */
     /* display: grid; */
-    grid-template-rows: 80px 600px  60px; 
+    grid-template-rows: 80px 800px  60px; 
 }
 .svg {
     background: white;
 }
 
  .mapadiv {
-    width: 40%;
+    width: 38%;
     /* height: 80%; */
     margin: auto;
 
@@ -592,7 +592,11 @@ nav ul li{
     gap: 10px;
     }
     /******** fin bloque 2 *********/
-
+    .mapadiv {
+        width: 70%;
+        /* height: 80%; */
+        margin: auto;  
+    }
 } 
 /******** fin segundo responsive *********/
  
@@ -712,6 +716,10 @@ nav ul li{
     gap: 10px;
     }
     /******** fin bloque 2 *********/
-
+    .mapadiv {
+        width: 90%;
+        /* height: 80%; */
+        margin: auto;  
+    }
 } 
 /******** fin tercer responsive *********/
