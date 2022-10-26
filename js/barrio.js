@@ -109,7 +109,7 @@ function change_display(event) {
 // }
 
 async function fetchLugaresJSON() {
-  const response = await fetch('/json/lugares.json', {
+  const response = await fetch('https://my-json-server.typicode.com/MaxiKobylnik/CAC_G17_22526/posts', {
     mode: 'no-cors'
   });
   const lugares = await response.json();
