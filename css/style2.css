@@ -377,7 +377,8 @@ nav ul li{
     position: fixed;
     width: 100%;
     bottom: 0;
-    left: 0;
+    left: 0; 
+    padding-top: 5px;
     text-align: center;
     height: 60px; 
     background:  #2BA8D9; /* FS 23/10 #f6d365;*/  
