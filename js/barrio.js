@@ -9,6 +9,7 @@
 //     }
 // }
 var barrioVisualizado;
+
 const barrios = [
   {
     id: 1,
@@ -56,7 +57,7 @@ function Params(url) {
   return urlParams;
 }
 
-function change_display(event) {
+function change_display(event,id_img) {
   let id = event.currentTarget.attributes.link_id.nodeValue;
   if (barrioVisualizado && barrioVisualizado !== id) {
     document
@@ -67,46 +68,34 @@ function change_display(event) {
   // console.log(event.currentTarget.attributes.link_id.nodeValue);
   let elemento = document.getElementById(id);
 
+  carousel(id_img);
   elemento.classList.remove("detalles_escondidos");
   // .style.display = "block";
   barrioVisualizado = id;
 }
 
-
-
-// function fetchLugares() {
-//   fetch("/json/lugares.json") //Como estamos en el mismo servidor
-//     .then((resp) => resp.json())
-//     .then((json) => {
-//       let barrioHtml = "<ul>";
-//       json.forEach((element) => {
-        
-//         if (
-//           element.barrio == Params(document.location.href).replace("+", " ")
-//         ) {
-          
-//           barrioHtml += `<li class="barrio_caja">
-//             <div >
-            
-        
-//             <p link_id= ${element.id} onclick= "change_display(event)">${element.nombreLugar}</p><br>
-//             </div>
-//             <div id=${element.id} class="detalles_escondidos"  >
-//             <p >${element.ubicacion}</p><br>
-//             <p  >
-            
-//             <iframe src=${element.link} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-//             </p><br>
-//             </div>
-//             </li>    
-//             `;
-//         }
-//       });
-//       barrioHtml += "</ul>";
-
-//       document.body.innerHTML += barrioHtml;
-//     });
-// }
+function carousel(id_img) {
+  var i;
+  var max_id;
+  var min_id;
+  var flag = 1;
+  var myIndex = 0;
+   var x = document.getElementsByClassName("fotos"+id_img);
+  // var x = document.getElementById("img_"+id_img);
+  for (i = 0; i < x.length ; i++) {
+    
+      x[i].style.display = "none";
+      
+      
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}   
+    console.log(x) ;
+  // x[myIndex-1].style.display = "block";
+  x[myIndex-1].attributes.style.nodeValue = "display:block";
+  // document.getElementsByClassName("fotos")[myIndex-1].style.display = "block";  
+   setTimeout(carousel, 1000);    
+}
 
 async function fetchLugaresJSON() {
   const response = await fetch('/json/lugares.json', {
@@ -124,15 +113,34 @@ fetchLugaresJSON().then((lugares) => {
       barrioHtml += `<li class="barrio_caja">
             <div class="barrio_plaza">
             
-        
-            <p link_id= ${lugar.id} onclick= "change_display(event)">${lugar.nombreLugar}</p><br>
+            <br>
+            <p class="nombrelugar" link_id= ${lugar.id} onclick= "change_display(event, ${lugar.id})">${lugar.nombreLugar} </p>
+            <br>
             </div>
             <div id=${lugar.id} class="detalles_escondidos"  >
-            <p >${lugar.ubicacion}</p><br>
+            <p class="barriodescripcion">${lugar.descripcion} </p><br>
+            <section >
+            
+                <div  class="image-container-caja">
+                <div  class="fotos${lugar.id}" style="display:block">
+                    <img  src=${lugar.img1} alt="image">
+                    </div>
+                    <div  class="fotos${lugar.id}" style="display:none">
+                    <img  src=${lugar.img2} alt="image">
+                    </div>
+                    <div  class="fotos${lugar.id}" style="display:none">
+                    <img  src=${lugar.img3} alt="image">
+                    </div>
+                </div>
+                
+                
+            
+          </section>
+            <p >${lugar.ubicacion} </p><br>
             <p  >
             
             <iframe src=${lugar.link} width=50% height=25% style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </p><br>
+            </p>
             </div>
             </li>    
             `;

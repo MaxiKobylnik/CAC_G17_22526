@@ -139,15 +139,6 @@ nav ul li{
     object-fit: fill;
 }
 
-.image-container {
-    display: flex;
-    width:500px;
-    height: 500px;
-    /* overflow: hidden; */
-    transition: transform 0.4s ease-in-out;
-}
-
-
 
 .btn{
     position: absolute; 
@@ -240,6 +231,29 @@ nav ul li{
 }
 
 /*Mapa*/
+.barrio_caja{
+    border-style:groove;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left:10%;
+    margin-right:10%;
+    width: 80%;
+    /* text-align: center; */
+}
+
+.detalles_escondidos{
+    display: none;
+}
+.nombrelugar{
+    font-weight: bold;
+}
+
+.barriodescripcion{
+    width: 50%;
+}
+
 .bodymap{
     /* font-family: 'Roboto', sans-serif; */
     /* background: #E5E5E5; */
@@ -272,11 +286,11 @@ nav ul li{
 }
 
 .barrio_caja:hover{
-    background-color: #f2cb05;
+    background-color: #9ecdec;
 }
 
 .mapadiv a :hover{
-  fill:#dac9df;
+    fill:#9ecdec;
 }
 
 .st0 {
@@ -290,6 +304,14 @@ nav ul li{
 
 .st2 {
     font-size: 32px;
+}
+
+.image-container-caja {
+    display: flex;
+    width:50%;
+    height: 50%;
+    /* overflow: hidden; */
+    transition: transform 0.4s ease-in-out;
 }
 /******** fin bloque1 *********/
 
