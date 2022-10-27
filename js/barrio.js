@@ -57,7 +57,7 @@ function Params(url) {
   return urlParams;
 }
 
-function change_display(event,id_img) {
+function change_display(event, id_img) {
   let id = event.currentTarget.attributes.link_id.nodeValue;
   if (barrioVisualizado && barrioVisualizado !== id) {
     document
@@ -68,38 +68,41 @@ function change_display(event,id_img) {
   // console.log(event.currentTarget.attributes.link_id.nodeValue);
   let elemento = document.getElementById(id);
 
-  carousel(id_img);
   elemento.classList.remove("detalles_escondidos");
   // .style.display = "block";
   barrioVisualizado = id;
+
+  carousel(id_img);
 }
+
+var myIndex = 1;
 
 function carousel(id_img) {
   var i;
   var max_id;
   var min_id;
   var flag = 1;
-  var myIndex = 0;
-   var x = document.getElementsByClassName("fotos"+id_img);
+  
+  var x = document.getElementsByClassName("fotos" + id_img);
   // var x = document.getElementById("img_"+id_img);
   for (i = 0; i < x.length ; i++) {
-    
+
       x[i].style.display = "none";
-      
-      
+
   }
   myIndex++;
-  if (myIndex > x.length) {myIndex = 1}   
-    console.log(x) ;
+  if (myIndex > x.length) {
+    myIndex = 1;
+  }
   // x[myIndex-1].style.display = "block";
-  x[myIndex-1].attributes.style.nodeValue = "display:block";
-  // document.getElementsByClassName("fotos")[myIndex-1].style.display = "block";  
-   setTimeout(carousel, 1000);    
+  x[myIndex - 1].style.display = "block";
+  // document.getElementsByClassName("fotos")[myIndex-1].style.display = "block";
+  setTimeout(() => carousel(id_img), 2000);
 }
 
 async function fetchLugaresJSON() {
-  const response = await fetch('/json/lugares.json', {
-    mode: 'no-cors'
+  const response = await fetch("/json/lugares.json", {
+    mode: "no-cors",
   });
   const lugares = await response.json();
   return lugares;
@@ -107,8 +110,8 @@ async function fetchLugaresJSON() {
 
 fetchLugaresJSON().then((lugares) => {
   let barrioHtml = "<ul>";
+  
   lugares.forEach((lugar) => {
-    
     if (lugar.barrio == Params(document.location.href).replace("+", " ")) {
       barrioHtml += `<li class="barrio_caja">
             <div class="barrio_plaza">
@@ -122,7 +125,7 @@ fetchLugaresJSON().then((lugares) => {
             <section >
             
                 <div  class="image-container-caja">
-                <div  class="fotos${lugar.id}" style="display:block">
+                  <div  class="fotos${lugar.id}" style="display:block">
                     <img  src=${lugar.img1} alt="image">
                     </div>
                     <div  class="fotos${lugar.id}" style="display:none">
@@ -145,9 +148,9 @@ fetchLugaresJSON().then((lugares) => {
             </li>    
             `;
     }
+
   });
   barrioHtml += "</ul>";
 
   document.body.innerHTML += barrioHtml;
 });
-
