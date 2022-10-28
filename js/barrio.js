@@ -126,13 +126,13 @@ fetchLugaresJSON().then((lugares) => {
             
                 <div  class="image-container-caja">
                   <div  class="fotos${lugar.id}" style="display:block">
-                    <img  src=${lugar.img1} alt="image">
+                    <img id="img_barrio" src=${lugar.img1} alt="image">
                     </div>
                     <div  class="fotos${lugar.id}" style="display:none">
-                    <img  src=${lugar.img2} alt="image">
+                    <img id="img_barrio" src=${lugar.img2} alt="image">
                     </div>
                     <div  class="fotos${lugar.id}" style="display:none">
-                    <img  src=${lugar.img3} alt="image">
+                    <img id="img_barrio" src=${lugar.img3} alt="image">
                     </div>
                 </div>
                 
