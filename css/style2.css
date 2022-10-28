@@ -90,15 +90,10 @@ nav ul li{
     border-radius: 0.5rem;
     font-weight:inherit;
 }
-.nav_items2{
-    color: #fff;
-    background-color:#F2CB05;/* FS 23/10 #FF5733;*/
-    line-height: 80px;
-    margin-right: 20px;
-    padding: 10px 15px; 
-    border-radius: 0.5rem;
-    font-weight:inherit; 
+.nav_items1:hover{  
+    box-shadow: 5px 5px;   
 }
+
 .nav_items3{
     color: #fff;
     background-color:#EF7918; /* FS 23/10 #FF5733;*/
@@ -107,6 +102,9 @@ nav ul li{
     padding: 10px 15px; 
     border-radius: 0.5rem;
     font-weight:inherit; 
+}
+.nav_items3:hover{     
+    box-shadow: 5px 5px;   
 }
 .nav_items4{
     color: #fff;
@@ -117,6 +115,9 @@ nav ul li{
     border-radius: 0.5rem;
     font-weight:inherit; 
 }
+.nav_items4:hover{  
+    box-shadow: 5px 5px;   
+}
 .nav_items5{
     color: #fff;
     background-color: #BF4B63; /* FS 23/10  #900C3F;*/
@@ -125,6 +126,9 @@ nav ul li{
     padding: 10px 15px;
     border-radius: 0.5rem;
     font-weight:inherit; 
+}
+.nav_items5:hover{   
+    box-shadow: 5px 5px;   
 }
 /******** fin del header *********/
 .bloque0 {
@@ -392,9 +396,7 @@ nav ul li{
 
 .bloque2_items:hover .bloque2_hover{
     transform: translateX(0%);
-}
-
-
+} 
 .footer {
     position: fixed;
     width: 100%;
@@ -558,7 +560,7 @@ nav ul li{
         display: none;
         left: 0;
     }
-
+   
     .slider{
         position: relative;
         width: 100%;
