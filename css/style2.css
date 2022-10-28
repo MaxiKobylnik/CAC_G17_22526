@@ -130,6 +130,18 @@ nav ul li{
 .nav_items5:hover{   
     box-shadow: 5px 5px;   
 }
+.about-us { 
+    margin-top: 10%;
+    margin-right:  15%;
+    margin-left:  15%;
+    text-align: center;
+    width: 60%;
+    height: 50%;
+    border-style:groove;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+} 
+
 /******** fin del header *********/
 .bloque0 {
     width: 100%;
