@@ -38,20 +38,6 @@ body {
     background:  #2BA8D9; /* FS 23/10 #f6d365;*/
 }
 
-.barrio_caja{
-    border-style:groove;
-    border-radius: 0.5rem;
-    padding-left: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.detalles_escondidos{
-    display: none;
-}
-
-
-
 #check{
     display:none;
 }
@@ -534,16 +520,6 @@ nav ul li{
 /******** fin primer responsive *********/
 
 
-
-
-
-
-
-
-
-
-
-
 /******** inicio segundo responsive *********/
 
 
@@ -659,6 +635,10 @@ nav ul li{
         width: 70%;
         /* height: 80%; */
         margin: auto;  
+    }
+
+    .barriodescripcion{
+        width: 80%;
     }
 } 
 /******** fin segundo responsive *********/
@@ -783,6 +763,10 @@ nav ul li{
         width: 90%;
         /* height: 80%; */
         margin: auto;  
+    }
+
+    .barriodescripcion{
+        width: 90%;
     }
 } 
 /******** fin tercer responsive *********/
