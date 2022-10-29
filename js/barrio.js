@@ -142,7 +142,7 @@ fetchLugaresJSON().then((lugares) => {
             <p >${lugar.ubicacion} </p><br>
             <p  >
             
-            <iframe src=${lugar.link} width=50% height=25% style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class ="mapframe" src=${lugar.link}  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </p>
             </div>
             </li>    
