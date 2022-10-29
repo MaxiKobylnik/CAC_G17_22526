@@ -165,18 +165,18 @@ nav ul li{
  
 @keyframes slide {
     0% {margin-left: 0%;}
-    20% {margin-left: 0%;}
+    30% {margin-left: 0%;}
     
-    20% {margin-left: -100%;}
-    40% {margin-left: -100%;}
+    30% {margin-left: -100%;}
+    50% {margin-left: -100%;}
     
-    40% {margin-left: -200%;}
-    60% {margin-left: -200%;}
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
     
-    60% {margin-left: -300%;}
-    80% {margin-left: -300%;}
+    70% {margin-left: -300%;}
+    95% {margin-left: -300%;}
 
-    80% {margin-left: -400%;}
+    95% {margin-left: -400%;}
     100% {margin-left: -400%;}
 } 
 
